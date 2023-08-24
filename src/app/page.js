@@ -10,7 +10,7 @@ export default function Home() {
     <main className="items-center justify-between">
       <div className="">
         <div className='h-full'>
-          <Navbar>
+      <Navbar className='bg-gray-400'>
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-inherit">ImapSync UMCC</p>
