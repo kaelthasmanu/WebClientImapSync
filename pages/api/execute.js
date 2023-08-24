@@ -1,4 +1,4 @@
-import { spawn } from 'node:child_process'
+/*import { spawn } from 'node:child_process'
 
 export default (req, res) => { 
     const ls = spawn("ls", ["-la"]);
@@ -22,4 +22,8 @@ export default (req, res) => {
         console.log(`child process exited with code ${code}`);
         res.status(200).json(code);
     });
-  }
+  }*/
+
+  export async function GET(request) {
+    return new Response('Hello Nesxtjs')
+}
