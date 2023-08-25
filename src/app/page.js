@@ -1,16 +1,19 @@
 "use client"
 import { useState,useContext,useEffect,useCallback } from 'react'
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Input, Progress, Image} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, Progress, Image} from "@nextui-org/react";
 import { AcmeLogo } from './components/AcmeLogo';
+import ButtonComponent from './components/ButtonComponent';
+import InputEmailComponent from './components/InputEmailComponent';
+import InputPasswordComponent from './components/InputPasswordComponent';
 //import imapsync from './execute'
 
 export default function Home() {
   return (
-    <main className="items-center justify-between">
+    <main className="items-center bg-zinc-700	h-full justify-between">
       <div className="">
         <div className='h-full'>
-      <Navbar className='bg-gray-400'>
+      <Navbar className='bg-gray-500'>
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-inherit">ImapSync UMCC</p>
@@ -34,23 +37,11 @@ export default function Home() {
           />
         </div>
           <div className='flex flex-auto self-auto justify-center space-x-60 p-10 mb-3'>
-            <Input
-              isRequired
-              type="email"
-              label="Email"
-              defaultValue="usuario@umcc.cu"
-              className="max-w-[350px]"
-            />
-            <Input
-              isRequired
-              type="password"
-              label="password"
-              defaultValue="password"
-              className="max-w-[350px]"
-            />
+            <InputEmailComponent/>
+            <InputPasswordComponent/>
           </div>
           <div className='flex flex-auto self-auto justify-center'>
-            <Button size='md'>Empezar</Button>
+            <ButtonComponent />
           </div>
           <div className='flex flex-auto self-auto justify-center p-10'>
             <Progress
