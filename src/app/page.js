@@ -3,9 +3,7 @@ import { useState,useContext,useEffect,useCallback } from 'react'
 import React from "react";
 import {Navbar, NavbarBrand, NavbarItem, Progress, Image} from "@nextui-org/react";
 import { AcmeLogo } from './components/AcmeLogo';
-import ButtonComponent from './components/ButtonComponent';
-import InputEmailComponent from './components/InputEmailComponent';
-import InputPasswordComponent from './components/InputPasswordComponent';
+import InputComponent from './components/InputComponent';
 //import imapsync from './execute'
 
 export default function Home() {
@@ -43,16 +41,7 @@ export default function Home() {
             src="https://previews.123rf.com/images/rclassenlayouts/rclassenlayouts1208/rclassenlayouts120800129/14757898-email-3d-e-mail-senden-mensaje-en-buz%C3%B3n-de-contacto-de-soporte-mensaje-s%C3%ADmbolo-pictograma-signo.jpg"
           />
         </div>
-        <InputEmailComponent/>
-          <div className='flex flex-auto self-auto justify-center p-10'>
-            <Progress
-              size="lg"
-              radius='lg'
-              isIndeterminate
-              aria-label="Loading..."
-              className="max-w-md"
-            />
-          </div>
+        <InputComponent/>
         </div>
       </div>
     </main>
