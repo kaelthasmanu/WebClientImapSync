@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import {Input} from "@nextui-org/react";
 import {EyeFilledIcon} from "./EyeFilledIcon";
 import {EyeSlashFilledIcon} from "./EyeSlashFilledIcon";
+import ButtonComponent from "./ButtonComponent";
 
 export default function InputPasswordComponent() {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [password, setPassword] = useState();
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 

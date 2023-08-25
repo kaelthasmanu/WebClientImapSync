@@ -1,7 +1,7 @@
 "use client"
 import { useState,useContext,useEffect,useCallback } from 'react'
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, Progress, Image} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarItem, Progress, Image} from "@nextui-org/react";
 import { AcmeLogo } from './components/AcmeLogo';
 import ButtonComponent from './components/ButtonComponent';
 import InputEmailComponent from './components/InputEmailComponent';
@@ -43,13 +43,7 @@ export default function Home() {
             src="https://previews.123rf.com/images/rclassenlayouts/rclassenlayouts1208/rclassenlayouts120800129/14757898-email-3d-e-mail-senden-mensaje-en-buz%C3%B3n-de-contacto-de-soporte-mensaje-s%C3%ADmbolo-pictograma-signo.jpg"
           />
         </div>
-          <div className='flex flex-auto self-auto justify-center space-x-60 p-10 mb-3'>
-            <InputEmailComponent/>
-            <InputPasswordComponent/>
-          </div>
-          <div className='flex flex-auto self-auto justify-center'>
-            <ButtonComponent />
-          </div>
+        <InputEmailComponent/>
           <div className='flex flex-auto self-auto justify-center p-10'>
             <Progress
               size="lg"

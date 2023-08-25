@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react"
 import React, { useState } from 'react';
 
-function ButtonComponent() {
+function ButtonComponent({user, pass}) {
   const [buttonEnable, setButtonDisabled] = useState(true);
   const [buttonLoading, setButtonLoading] = useState();
 
@@ -15,6 +15,8 @@ function ButtonComponent() {
   const handleClickLoading = () => {
     setButtonLoading(true);
     setButtonDisabled(false)
+    console.log(user)
+    console.log(pass)
     // You can perform other actions here based on the button click
   };
   if (buttonEnable){
