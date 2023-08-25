@@ -18,6 +18,13 @@ export default function Home() {
           <AcmeLogo />
           <p className="font-bold text-inherit">ImapSync UMCC</p>
         </NavbarBrand>
+        <NavbarItem>
+          <Image
+            width={50}
+            alt="Email"
+            src="https://www.idc-latinamerica.com/sites/default/files/2021-07/UMCC%20Logo.png"
+          />    
+        </NavbarItem>
       </Navbar>
         <div className='flex flex-auto self-auto justify-center space-x-40 p-8 mb-2'>
           <Image
