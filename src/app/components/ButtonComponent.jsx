@@ -10,15 +10,32 @@ function ButtonComponent({user, pass}) {
     return (
       <Button size='md' isDisabled onPress={handleClickLoading} >Empezar</Button>
     );
-    // You can perform other actions here based on the button click
   };
+  async function postData(url, data) {
+    const response = await fetch(url, {
+      method: "POST", 
+      mode: "cors", 
+      cache: "no-cache", 
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow", 
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(data), 
+    });
+    return response.json(); 
+  }
   const handleClickLoading = () => {
-    setButtonLoading(true);
-    setButtonDisabled(false)
+    //setButtonLoading(true);
+    //setButtonDisabled(false)
     console.log(user)
     console.log(pass)
-    // You can perform other actions here based on the button click
+    postData("http://localhost:3000/api/execute", { user:user  , pass:pass }).then((data) => {
+    console.log(data); 
+   });
   };
+  
   if (buttonEnable){
     return (<Button size='md' onPress={handleClickLoading} >Empezar</Button>)
   }
