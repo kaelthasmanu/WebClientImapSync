@@ -43,6 +43,7 @@ export async function GET(request) {
 export async function POST(request) {
     const bodyText = await request.text();
     const bodyJson = JSON.parse(bodyText);
-    console.log(bodyJson);
+    console.log(bodyJson["user"], bodyJson["pass"]);
+    await new Promise(r => setTimeout(r, 6000));
     return NextResponse.json({message: "Success"})    
 }

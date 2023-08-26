@@ -2,15 +2,9 @@ import { Button } from "@nextui-org/react"
 import React, { useState } from 'react';
 
 function ButtonComponent({user, pass}) {
-  const [buttonEnable, setButtonDisabled] = useState(true);
-  const [buttonLoading, setButtonLoading] = useState();
+  const [buttonEnable, setButtonDisabled] = useState(false);
+  const [buttonLoading, setButtonLoading] = useState(false);
 
-  const handleClickDisabled = () => {
-    setButtonDisabled(false);
-    return (
-      <Button size='md' isDisabled onPress={handleClickLoading} >Empezar</Button>
-    );
-  };
   async function postData(url, data) {
     const response = await fetch(url, {
       method: "POST", 
@@ -26,24 +20,30 @@ function ButtonComponent({user, pass}) {
     });
     return response.json(); 
   }
+
   const handleClickLoading = () => {
-    //setButtonLoading(true);
-    //setButtonDisabled(false)
-    console.log(user)
-    console.log(pass)
-    postData("http://localhost:3000/api/execute", { user:user  , pass:pass }).then((data) => {
-    console.log(data); 
-   });
+    setButtonLoading(true);
+    try{
+      postData("http://localhost:3000/api/execute", { user:user  , pass:pass }).then((data) => {
+        if(data["message"] === 'Success'){
+          setButtonLoading(false);
+        } 
+      });
+    }
+    catch(err){
+      console.log(err)
+    }
   };
   
-  if (buttonEnable){
-    return (<Button size='md' onPress={handleClickLoading} >Empezar</Button>)
+  if(user === null || user == "manuel.gorrin@umcc.cu"){
+    return (<Button size='md' isDisabled onPress={handleClickLoading} >Empezar</Button>)
   }
-  if (buttonEnable){
-    return (<Button size='md' onPress={handleClickLoading} >Empezar</Button>)
-  }
-  if (buttonLoading){
+  else if (buttonLoading){
     return (<Button size='md' isLoading onPress={handleClickLoading} >Empezar</Button>)
+    
+  }
+  else{
+    return (<Button size='md' onPress={handleClickLoading} >Empezar</Button>)
   }
 }
 

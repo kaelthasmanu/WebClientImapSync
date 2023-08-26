@@ -7,6 +7,8 @@ import {EyeSlashFilledIcon} from "./EyeSlashFilledIcon";
 
 export default function InputComponent() {
     const [value, setValue] = useState("manuel.gorrin@umcc.cu");
+    const [isVisible, setIsVisible] = useState(false);
+    const [password, setPassword] = useState("asd");
 
     const validateEmail = (value) => value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
@@ -15,10 +17,7 @@ export default function InputComponent() {
         return validateEmail(value) ? "valid" : "invalid";
     }, [value]);
 
-    const [isVisible, setIsVisible] = useState(false);
-    const [password, setPassword] = useState("asd");
     const toggleVisibility = () => setIsVisible(!isVisible);
-
       
     return (
     <div>
