@@ -1,0 +1,426 @@
+Here is imapsync 2.229 on host Whois, a linux system with 0.2/7.6 free GiB of RAM, 138.31% used by processes.
+with Perl 5.34.0 and Mail::IMAPClient 3.43
+Transfer started at sábado 26 agosto 2023-08-26 03:52:07 -0400 CDT
+PID is 32918 my PPID is 32834
+Log file is LOG_imapsync/2023_08_26_03_52_07_580_manuel.gorrin@umcc.cu_manuel.gorrin@umcc.cu.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 2.84 1.87 1.40 3/1502 on 4 cores
+Current directory is /home/whois/Desktop/WebClientImapSync
+Real user id is whois (uid 1000)
+Effective user id is whois (euid 1000)
+$RCSfile: imapsync,v $ $Revision: 2.229 $ $Date: 2022/09/14 18:08:24 $ 
+Command line used, run by /usr/bin/perl:
+/usr/bin/imapsync --host1 correo.umcc.cu --user1 manuel.gorrin@umcc.cu --password1 MASKED --host2 mail.umcc.cu --user2 manuel.gorrin@umcc.cu --password2 MASKED
+Temp directory is /tmp ( to change it use --tmpdir dirpath )
+kill -QUIT 32918 # special behavior: call to sub catch_exit
+kill -TERM 32918 # special behavior: call to sub catch_exit
+kill -INT 32918 # special behavior: call to sub catch_reconnect
+kill -HUP 32918 # special behavior: call to sub catch_print
+kill -USR1 32918 # special behavior: call to sub toggle_sleep
+File /tmp/imapsync.pid does not exist
+PID file is /tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 32918 in /tmp/imapsync.pid
+Writing also my logfile name in /tmp/imapsync.pid : LOG_imapsync/2023_08_26_03_52_07_580_manuel.gorrin@umcc.cu_manuel.gorrin@umcc.cu.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  4.54
+Compress::Zlib       2.102
+Crypt::OpenSSL::RSA  0.32
+Data::Uniqid         0.12
+Digest::HMAC_MD5     1.04
+Digest::HMAC_SHA1    1.04
+Digest::MD5          2.58
+Encode               3.08
+Encode::IMAPUTF7     1.05
+File::Copy::Recursive 0.45
+File::Spec           3.80
+Getopt::Long         2.52
+HTML::Entities       3.76
+IO::Socket           1.46
+IO::Socket::INET     1.46
+IO::Socket::INET6    2.73
+IO::Socket::IP       0.41
+IO::Socket::SSL      2.074
+IO::Tee              0.65
+JSON                 4.04
+JSON::WebToken       0.10
+LWP                  6.61
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.92
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9767
+URI::Escape          5.10
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+Host1: probing ssl on port 993 ( use --nosslcheck to avoid this ssl probe ) 
+Host1: sslcheck detected open ssl port 993 so turning ssl on (use --nossl1 --notls1 to turn off SSL and TLS wizardry)
+Host2: probing ssl on port 993 ( use --nosslcheck to avoid this ssl probe ) 
+Host2: sslcheck detected open ssl port 993 so turning ssl on (use --nossl2 --notls2 to turn off SSL and TLS wizardry)
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [correo.umcc.cu] port [993] user [manuel.gorrin@umcc.cu]
+Host2: IMAP server [mail.umcc.cu] port [993] user [manuel.gorrin@umcc.cu]
+Host1: connecting and login on host1 [correo.umcc.cu] port [993] with user [manuel.gorrin@umcc.cu]
+Host1 IP address: 10.34.8.9 Local IP address: 10.8.0.8
+Host1 banner: * OK IMAP4rev1 proxy server ready
+Host1 capability before authentication: ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE IMAP4rev1 LIST-EXTENDED LIST-STATUS LITERAL+ MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST AUTH=PLAIN I18NLEVEL RIGHTS THREAD AUTH
+Host1: success login on [correo.umcc.cu] with user [manuel.gorrin@umcc.cu] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [mail.umcc.cu] port [993] with user [manuel.gorrin@umcc.cu]
+Host2 IP address: 10.34.8.163 Local IP address: 10.8.0.8
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready OK+.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host2: mail.umcc.cu says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mail.umcc.cu] with user [manuel.gorrin@umcc.cu] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST I18NLEVEL RIGHTS THREAD
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE ACL RIGHTS=texk THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS RIGHTS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.229" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "14-Sep-2022 18:08:24 +0000" "side" "host1")
+Sent 181 bytes
+Read: 	* ID ("NAME" "Zimbra" "VERSION" "10.0.0_GA_0001" "RELEASE" "20230418135109" "USER" "manuel.gorrin@umcc.cu" "SERVER" "690b31c7-ac9d-4d90-bd95-7b72e088ae2e")
+  	4 OK ID completed
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.229" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "14-Sep-2022 18:08:24 +0000" "side" "host2")
+Sent 181 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: No QUOTA capability found, skipping it.
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Host1: found 7 folders.
+Host2: found 7 folders.
+Host1: guessing separator from folder listing: [/]
+Host1: separator given by NAMESPACE: [/]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [/]
+Host1: guessing prefix from folder listing: []
+Host1: prefix given by NAMESPACE: []
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [/][]
+Host2: separator and prefix: [/][]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "/" "Comments"
+* LIST (\HasNoChildren \Drafts) "/" "Drafts"
+* LIST (\HasNoChildren) "/" "INBOX"
+* LIST (\NoInferiors \Junk) "/" "Junk"
+* LIST (\HasNoChildren) "/" "Notes"
+* LIST (\HasNoChildren \Sent) "/" "Sent"
+* LIST (\HasNoChildren \Trash) "/" "Trash"
+16 OK LIST completed
+
+[Comments]
+[Drafts]
+[INBOX]
+[Junk]
+[Notes]
+[Sent]
+[Trash]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren \UnMarked \Junk) "/" Spam
+* LIST (\HasNoChildren \UnMarked \Archive) "/" Archive
+* LIST (\HasNoChildren \UnMarked \Trash) "/" Trash
+* LIST (\HasNoChildren \UnMarked \Junk) "/" Junk
+* LIST (\HasNoChildren \UnMarked \Drafts) "/" Drafts
+* LIST (\HasNoChildren \Sent) "/" Sent
+* LIST (\HasNoChildren) "/" INBOX
+9 OK List completed (0.001 + 0.000 secs).
+
+[Archive]
+[Drafts]
+[INBOX]
+[Junk]
+[Sent]
+[Spam]
+[Trash]
+
+Folders in host2 not in host1:
+[Spam]
+[Archive]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 345 messages mentioned by SELECT
+Host1: folder [INBOX] has 345 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (345) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 5 messages mentioned by SELECT
+Host2: folder [INBOX] has 5 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (5) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder     1/7 [Comments]                          Size:         0 Messages:     0 Biggest:         0
+Host2 folder     1/7 [Comments]                           does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     2/7 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/7 [INBOX]                             Size:  64917621 Messages:   345 Biggest:  10004307
+Host2 folder     3/7 [INBOX]                             Size:      5063 Messages:     5 Biggest:      1854
+Host2-Host1                                                    -64912558            -340          -10002453
+
+Host1 folder     4/7 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/7 [Notes]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     5/7 [Notes]                              does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     6/7 [Sent]                              Size:  18247349 Messages:   189 Biggest:   4898722
+Host2 folder     6/7 [Sent]                              Size:      5047 Messages:     7 Biggest:       996
+Host2-Host1                                                    -18242302            -182           -4897726
+
+Host1 folder     7/7 [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                     7 folders
+Host2 Nb folders:                     7 folders
+
+Host1 Nb messages:                  534 messages
+Host2 Nb messages:                   12 messages
+
+Host1 Total size:              83164970 bytes (79.312 MiB)
+Host2 Total size:                 10110 bytes (9.873 KiB)
+
+Host1 Biggest message:         10004307 bytes (9.541 MiB)
+Host2 Biggest message:             1854 bytes (1.811 KiB)
+
+Time spent on sizing:         7.0 seconds
+++++ Looping on each one of 7 folders to sync
+ETA: sábado 26 agosto 2023-08-26 03:52:14 -0400 CDT  0 s  534/534 msgs left
+Folder     1/7 [Comments]                          -> [Comments]                         
+Host1: folder [Comments] has 0 messages in total (mentioned by SELECT)
+Creating folder [Comments] on host2
+Created folder [Comments] on host2
+Host2: folder [Comments] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Comments] permanentflags: 
+Host1: folder [Comments] considering 0 messages
+Host2: folder [Comments] considering 0 messages
+Host1: folder [Comments] selected 0 messages, duplicates 0
+Host2: folder [Comments] selected 0 messages, duplicates 0
+ETA: sábado 26 agosto 2023-08-26 03:56:41 -0400 CDT  266 s  534/534 msgs left
+Folder     2/7 [Drafts]                            -> [Drafts]                           
+Host1: folder [Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] permanentflags: 
+Host1: folder [Drafts] considering 0 messages
+Host2: folder [Drafts] considering 0 messages
+Host1: folder [Drafts] selected 0 messages, duplicates 0
+Host2: folder [Drafts] selected 0 messages, duplicates 0
+ETA: sábado 26 agosto 2023-08-26 03:59:43 -0400 CDT  448 s  534/534 msgs left
+Folder     3/7 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 345 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 5 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 345 messages
+Host2: folder [INBOX] considering 5 messages
+Host1: folder [INBOX] selected 345 messages, duplicates 0
+Host2: folder [INBOX] selected 5 messages, duplicates 0
+msg INBOX/303 {89216}         copied to INBOX/10         0.26 msgs/s  22.225 KiB/s 87.125 KiB copied ETA: sábado 26 agosto 2023-08-26 04:27:08 -0400 CDT  2090 s  533/534 msgs left
+msg INBOX/351 {6541}          copied to INBOX/11         0.47 msgs/s  22.155 KiB/s 93.513 KiB copied ETA: sábado 26 agosto 2023-08-26 04:11:01 -0400 CDT  1123 s  532/534 msgs left
+msg INBOX/354 {6517}          copied to INBOX/12         0.67 msgs/s  22.150 KiB/s 99.877 KiB copied ETA: sábado 26 agosto 2023-08-26 04:05:37 -0400 CDT  798 s  531/534 msgs left
+msg INBOX/357 {17274}         copied to INBOX/13         0.81 msgs/s  23.697 KiB/s 116.746 KiB copied ETA: sábado 26 agosto 2023-08-26 04:03:12 -0400 CDT  653 s  530/534 msgs left
+msg INBOX/359 {4868}          copied to INBOX/14         0.95 msgs/s  23.114 KiB/s 121.500 KiB copied ETA: sábado 26 agosto 2023-08-26 04:01:36 -0400 CDT  556 s  529/534 msgs left
+msg INBOX/363 {7812}          copied to INBOX/15         1.07 msgs/s  23.124 KiB/s 129.129 KiB copied ETA: sábado 26 agosto 2023-08-26 04:00:31 -0400 CDT  491 s  528/534 msgs left
+msg INBOX/365 {7826}          copied to INBOX/16         1.18 msgs/s  22.984 KiB/s 136.771 KiB copied ETA: sábado 26 agosto 2023-08-26 03:59:48 -0400 CDT  448 s  527/534 msgs left
+msg INBOX/367 {25981}         copied to INBOX/17         1.25 msgs/s  25.289 KiB/s 162.144 KiB copied ETA: sábado 26 agosto 2023-08-26 03:59:22 -0400 CDT  422 s  526/534 msgs left
+msg INBOX/368 {4867}          copied to INBOX/18         1.33 msgs/s  24.711 KiB/s 166.896 KiB copied ETA: sábado 26 agosto 2023-08-26 03:58:55 -0400 CDT  394 s  525/534 msgs left
+msg INBOX/369 {4864}          copied to INBOX/19         1.41 msgs/s  24.208 KiB/s 171.646 KiB copied ETA: sábado 26 agosto 2023-08-26 03:58:33 -0400 CDT  372 s  524/534 msgs left
+msg INBOX/371 {34372}         copied to INBOX/20         1.46 msgs/s  27.223 KiB/s 205.213 KiB copied ETA: sábado 26 agosto 2023-08-26 03:58:20 -0400 CDT  358 s  523/534 msgs left
+msg INBOX/372 {20148}         copied to INBOX/21         1.50 msgs/s  28.107 KiB/s 224.889 KiB copied ETA: sábado 26 agosto 2023-08-26 03:58:10 -0400 CDT  348 s  522/534 msgs left
+msg INBOX/373 {19992}         copied to INBOX/22         1.54 msgs/s  28.888 KiB/s 244.412 KiB copied ETA: sábado 26 agosto 2023-08-26 03:58:02 -0400 CDT  339 s  521/534 msgs left
+msg INBOX/374 {30516}         copied to INBOX/23         1.58 msgs/s  30.916 KiB/s 274.213 KiB copied ETA: sábado 26 agosto 2023-08-26 03:57:52 -0400 CDT  329 s  520/534 msgs left
+msg INBOX/375 {61457}         copied to INBOX/24         1.59 msgs/s  35.530 KiB/s 334.229 KiB copied ETA: sábado 26 agosto 2023-08-26 03:57:49 -0400 CDT  326 s  519/534 msgs left
+msg INBOX/377 {3244}          copied to INBOX/25         1.65 msgs/s  34.804 KiB/s 337.397 KiB copied ETA: sábado 26 agosto 2023-08-26 03:57:38 -0400 CDT  314 s  518/534 msgs left
+msg INBOX/378 {1249754}       copied to INBOX/26         1.22 msgs/s  111.810 KiB/s 1.521 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:32 -0400 CDT  424 s  517/534 msgs left
+msg INBOX/379 {36346}         copied to INBOX/27         1.25 msgs/s  111.037 KiB/s 1.556 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:20 -0400 CDT  411 s  516/534 msgs left
+msg INBOX/380 {7020}          copied to INBOX/28         1.29 msgs/s  108.863 KiB/s 1.563 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:07 -0400 CDT  398 s  515/534 msgs left
+msg INBOX/381 {3570}          copied to INBOX/29         1.34 msgs/s  107.276 KiB/s 1.566 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:53 -0400 CDT  384 s  514/534 msgs left
+msg INBOX/382 {86662}         copied to INBOX/30         1.35 msgs/s  108.423 KiB/s 1.649 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:50 -0400 CDT  380 s  513/534 msgs left
+msg INBOX/383 {4866}          copied to INBOX/31         1.38 msgs/s  105.863 KiB/s 1.653 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:42 -0400 CDT  372 s  512/534 msgs left
+msg INBOX/384 {7014}          copied to INBOX/32         1.41 msgs/s  103.963 KiB/s 1.660 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:34 -0400 CDT  363 s  511/534 msgs left
+msg INBOX/386 {3132}          copied to INBOX/33         1.44 msgs/s  102.505 KiB/s 1.663 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:24 -0400 CDT  353 s  510/534 msgs left
+msg INBOX/387 {359319}        copied to INBOX/34         1.38 msgs/s  113.711 KiB/s 2.006 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:40 -0400 CDT  368 s  509/534 msgs left
+msg INBOX/389 {7712}          copied to INBOX/35         1.41 msgs/s  111.880 KiB/s 2.013 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:33 -0400 CDT  360 s  508/534 msgs left
+msg INBOX/393 {4874}          copied to INBOX/36         1.44 msgs/s  110.031 KiB/s 2.018 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:25 -0400 CDT  353 s  507/534 msgs left
+msg INBOX/397 {3002}          copied to INBOX/37         1.47 msgs/s  108.949 KiB/s 2.021 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:16 -0400 CDT  343 s  506/534 msgs left
+msg INBOX/403 {22879}         copied to INBOX/38         1.49 msgs/s  107.666 KiB/s 2.042 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:12 -0400 CDT  338 s  505/534 msgs left
+msg INBOX/404 {23023}         copied to INBOX/39         1.51 msgs/s  106.391 KiB/s 2.064 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:08 -0400 CDT  334 s  504/534 msgs left
+msg INBOX/405 {19512}         copied to INBOX/40         1.53 msgs/s  105.165 KiB/s 2.083 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:03 -0400 CDT  329 s  503/534 msgs left
+msg INBOX/406 {10301}         copied to INBOX/41         1.55 msgs/s  104.004 KiB/s 2.093 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:58 -0400 CDT  323 s  502/534 msgs left
+msg INBOX/407 {3329}          copied to INBOX/42         1.58 msgs/s  102.961 KiB/s 2.096 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:51 -0400 CDT  316 s  501/534 msgs left
+msg INBOX/408 {10741}         copied to INBOX/43         1.60 msgs/s  101.747 KiB/s 2.106 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:47 -0400 CDT  312 s  500/534 msgs left
+msg INBOX/413 {65048}         copied to INBOX/44         1.61 msgs/s  102.286 KiB/s 2.168 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:45 -0400 CDT  310 s  499/534 msgs left
+msg INBOX/419 {4869}          copied to INBOX/45         1.63 msgs/s  100.924 KiB/s 2.173 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:41 -0400 CDT  305 s  498/534 msgs left
+msg INBOX/420 {6529}          copied to INBOX/46         1.65 msgs/s  99.735 KiB/s 2.179 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:37 -0400 CDT  301 s  497/534 msgs left
+msg INBOX/423 {4871}          copied to INBOX/47         1.67 msgs/s  98.539 KiB/s 2.184 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:33 -0400 CDT  296 s  496/534 msgs left
+msg INBOX/424 {89630}         copied to INBOX/48         1.68 msgs/s  99.861 KiB/s 2.269 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:33 -0400 CDT  295 s  495/534 msgs left
+msg INBOX/425 {3004}          copied to INBOX/49         1.70 msgs/s  98.843 KiB/s 2.272 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:28 -0400 CDT  291 s  494/534 msgs left
+msg INBOX/426 {84428}         copied to INBOX/50         1.70 msgs/s  100.083 KiB/s 2.353 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:28 -0400 CDT  289 s  493/534 msgs left
+msg INBOX/427 {51088}         copied to INBOX/51         1.71 msgs/s  100.309 KiB/s 2.401 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:26 -0400 CDT  287 s  492/534 msgs left
+msg INBOX/430 {30508}         copied to INBOX/52         1.73 msgs/s  99.990 KiB/s 2.430 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:23 -0400 CDT  284 s  491/534 msgs left
+msg INBOX/431 {2506336}       copied to INBOX/53         1.40 msgs/s  156.838 KiB/s 4.821 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:36 -0400 CDT  351 s  490/534 msgs left
+msg INBOX/432 {50074}         copied to INBOX/54         1.41 msgs/s  155.785 KiB/s 4.868 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:34 -0400 CDT  348 s  489/534 msgs left
+msg INBOX/433 {15558}         copied to INBOX/55         1.42 msgs/s  154.652 KiB/s 4.883 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:29 -0400 CDT  343 s  488/534 msgs left
+msg INBOX/434 {88566}         copied to INBOX/56         1.43 msgs/s  154.313 KiB/s 4.968 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:29 -0400 CDT  342 s  487/534 msgs left
+msg INBOX/450 {7690}          copied to INBOX/57         1.44 msgs/s  152.949 KiB/s 4.975 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:25 -0400 CDT  337 s  486/534 msgs left
+msg INBOX/451 {2741}          copied to INBOX/58         1.46 msgs/s  151.920 KiB/s 4.978 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:20 -0400 CDT  332 s  485/534 msgs left
+msg INBOX/452 {70143}         copied to INBOX/59         1.47 msgs/s  151.678 KiB/s 5.045 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:18 -0400 CDT  330 s  484/534 msgs left
+msg INBOX/455 {4893}          copied to INBOX/60         1.48 msgs/s  150.094 KiB/s 5.049 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:15 -0400 CDT  326 s  483/534 msgs left
+msg INBOX/457 {7685}          copied to INBOX/61         1.49 msgs/s  148.703 KiB/s 5.057 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:12 -0400 CDT  323 s  482/534 msgs left
+msg INBOX/458 {4898}          copied to INBOX/62         1.51 msgs/s  147.479 KiB/s 5.061 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:08 -0400 CDT  319 s  481/534 msgs left
+msg INBOX/459 {926793}        copied to INBOX/63         1.40 msgs/s  157.913 KiB/s 5.945 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:35 -0400 CDT  343 s  480/534 msgs left
+msg INBOX/460 {3149}          copied to INBOX/64         1.42 msgs/s  156.796 KiB/s 5.948 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:31 -0400 CDT  338 s  479/534 msgs left
+msg INBOX/461 {76318}         copied to INBOX/65         1.42 msgs/s  156.170 KiB/s 6.021 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:31 -0400 CDT  337 s  478/534 msgs left
+msg INBOX/462 {3337}          copied to INBOX/66         1.43 msgs/s  155.105 KiB/s 6.024 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:27 -0400 CDT  333 s  477/534 msgs left
+msg INBOX/463 {3493}          copied to INBOX/67         1.45 msgs/s  154.361 KiB/s 6.027 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:22 -0400 CDT  328 s  476/534 msgs left
+msg INBOX/467 {4806}          copied to INBOX/68         1.46 msgs/s  153.198 KiB/s 6.032 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:19 -0400 CDT  325 s  475/534 msgs left
+msg INBOX/468 {4916}          copied to INBOX/69         1.48 msgs/s  152.134 KiB/s 6.037 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:16 -0400 CDT  321 s  474/534 msgs left
+msg INBOX/470 {4937}          copied to INBOX/70         1.49 msgs/s  151.151 KiB/s 6.041 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:12 -0400 CDT  317 s  473/534 msgs left
+msg INBOX/472 {7701}          copied to INBOX/71         1.50 msgs/s  150.211 KiB/s 6.049 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:09 -0400 CDT  314 s  472/534 msgs left
+msg INBOX/473 {51038}         copied to INBOX/72         1.51 msgs/s  149.808 KiB/s 6.097 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:07 -0400 CDT  312 s  471/534 msgs left
+msg INBOX/474 {4903}          copied to INBOX/73         1.52 msgs/s  148.706 KiB/s 6.102 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:05 -0400 CDT  309 s  470/534 msgs left
+msg INBOX/478 {3006}          copied to INBOX/74         1.54 msgs/s  147.976 KiB/s 6.105 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:01 -0400 CDT  305 s  469/534 msgs left
+msg INBOX/479 {26613}         copied to INBOX/75         1.55 msgs/s  147.203 KiB/s 6.130 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:59 -0400 CDT  302 s  468/534 msgs left
+msg INBOX/481 {7385}          copied to INBOX/76         1.56 msgs/s  146.183 KiB/s 6.137 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:57 -0400 CDT  300 s  467/534 msgs left
+msg INBOX/486 {4832}          copied to INBOX/77         1.57 msgs/s  145.069 KiB/s 6.142 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:55 -0400 CDT  297 s  466/534 msgs left
+msg INBOX/491 {22360}         copied to INBOX/78         1.57 msgs/s  144.003 KiB/s 6.163 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:53 -0400 CDT  295 s  465/534 msgs left
+msg INBOX/495 {4818}          copied to INBOX/79         1.58 msgs/s  142.544 KiB/s 6.168 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:52 -0400 CDT  294 s  464/534 msgs left
+msg INBOX/498 {4939}          copied to INBOX/80         1.59 msgs/s  141.342 KiB/s 6.173 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:50 -0400 CDT  292 s  463/534 msgs left
+msg INBOX/499 {2689}          copied to INBOX/81         1.60 msgs/s  140.512 KiB/s 6.175 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:48 -0400 CDT  289 s  462/534 msgs left
+msg INBOX/500 {4820479}       copied to INBOX/82         1.24 msgs/s  187.982 KiB/s 10.772 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:23 -0400 CDT  371 s  461/534 msgs left
+msg INBOX/501 {96719}         copied to INBOX/83         1.25 msgs/s  187.652 KiB/s 10.865 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:22 -0400 CDT  369 s  460/534 msgs left
+msg INBOX/502 {2860}          copied to INBOX/84         1.26 msgs/s  186.801 KiB/s 10.867 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:18 -0400 CDT  365 s  459/534 msgs left
+msg INBOX/506 {7338}          copied to INBOX/85         1.27 msgs/s  185.807 KiB/s 10.874 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:15 -0400 CDT  361 s  458/534 msgs left
+msg INBOX/508 {7358}          copied to INBOX/86         1.28 msgs/s  184.878 KiB/s 10.881 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:12 -0400 CDT  358 s  457/534 msgs left
+msg INBOX/509 {835502}        copied to INBOX/87         1.25 msgs/s  191.099 KiB/s 11.678 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:22 -0400 CDT  366 s  456/534 msgs left
+msg INBOX/510 {2995}          copied to INBOX/88         1.26 msgs/s  190.226 KiB/s 11.681 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:19 -0400 CDT  362 s  455/534 msgs left
+msg INBOX/511 {26622}         copied to INBOX/89         1.26 msgs/s  189.273 KiB/s 11.706 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:17 -0400 CDT  359 s  454/534 msgs left
+msg INBOX/512 {7847}          copied to INBOX/90         1.27 msgs/s  188.217 KiB/s 11.714 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:14 -0400 CDT  356 s  453/534 msgs left
+msg INBOX/513 {27452}         copied to INBOX/91         1.28 msgs/s  187.113 KiB/s 11.740 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:12 -0400 CDT  354 s  452/534 msgs left
+msg INBOX/514 {52742}         copied to INBOX/92         1.28 msgs/s  186.113 KiB/s 11.790 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:11 -0400 CDT  352 s  451/534 msgs left
+msg INBOX/516 {23710}         copied to INBOX/93         1.28 msgs/s  185.030 KiB/s 11.813 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:10 -0400 CDT  350 s  450/534 msgs left
+msg INBOX/519 {3419}          copied to INBOX/94         1.29 msgs/s  184.017 KiB/s 11.816 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:07 -0400 CDT  347 s  449/534 msgs left
+msg INBOX/521 {7307}          copied to INBOX/95         1.30 msgs/s  183.130 KiB/s 11.823 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:05 -0400 CDT  344 s  448/534 msgs left
+msg INBOX/522 {3874}          copied to INBOX/96         1.31 msgs/s  182.391 KiB/s 11.827 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:02 -0400 CDT  341 s  447/534 msgs left
+msg INBOX/529 {4632}          copied to INBOX/97         1.32 msgs/s  181.443 KiB/s 11.831 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:59 -0400 CDT  338 s  446/534 msgs left
+msg INBOX/543 {7497}          copied to INBOX/98         1.33 msgs/s  180.658 KiB/s 11.838 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:57 -0400 CDT  336 s  445/534 msgs left
+msg INBOX/550 {6946}          copied to INBOX/99         1.33 msgs/s  179.759 KiB/s 11.845 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:54 -0400 CDT  333 s  444/534 msgs left
+msg INBOX/554 {3733}          copied to INBOX/100        1.34 msgs/s  179.072 KiB/s 11.849 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:52 -0400 CDT  330 s  443/534 msgs left
+msg INBOX/555 {10371}         copied to INBOX/101        1.35 msgs/s  178.280 KiB/s 11.859 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:49 -0400 CDT  327 s  442/534 msgs left
+msg INBOX/556 {88405}         copied to INBOX/102        1.35 msgs/s  177.586 KiB/s 11.943 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:49 -0400 CDT  327 s  441/534 msgs left
+msg INBOX/557 {4732}          copied to INBOX/103        1.36 msgs/s  176.579 KiB/s 11.947 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:48 -0400 CDT  324 s  440/534 msgs left
+msg INBOX/558 {6693}          copied to INBOX/104        1.36 msgs/s  175.729 KiB/s 11.954 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:46 -0400 CDT  322 s  439/534 msgs left
+msg INBOX/559 {4868}          copied to INBOX/105        1.37 msgs/s  175.060 KiB/s 11.958 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:43 -0400 CDT  319 s  438/534 msgs left
+msg INBOX/560 {2889}          copied to INBOX/106        1.38 msgs/s  174.521 KiB/s 11.961 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:40 -0400 CDT  316 s  437/534 msgs left
+msg INBOX/561 {3680}          copied to INBOX/107        1.39 msgs/s  174.087 KiB/s 11.965 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:38 -0400 CDT  313 s  436/534 msgs left
+msg INBOX/562 {6806}          copied to INBOX/108        1.40 msgs/s  173.427 KiB/s 11.971 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:35 -0400 CDT  311 s  435/534 msgs left
+msg INBOX/563 {4924}          copied to INBOX/109        1.41 msgs/s  172.769 KiB/s 11.976 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:33 -0400 CDT  308 s  434/534 msgs left
+msg INBOX/564 {4953}          copied to INBOX/110        1.42 msgs/s  172.042 KiB/s 11.981 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:31 -0400 CDT  306 s  433/534 msgs left
+msg INBOX/565 {4708}          copied to INBOX/111        1.42 msgs/s  171.372 KiB/s 11.985 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:29 -0400 CDT  303 s  432/534 msgs left
+msg INBOX/566 {4635}          copied to INBOX/112        1.43 msgs/s  170.719 KiB/s 11.989 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:27 -0400 CDT  301 s  431/534 msgs left
+msg INBOX/567 {4808}          copied to INBOX/113        1.44 msgs/s  170.045 KiB/s 11.994 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:25 -0400 CDT  299 s  430/534 msgs left
+msg INBOX/568 {4765}          copied to INBOX/114        1.45 msgs/s  169.384 KiB/s 11.999 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:23 -0400 CDT  296 s  429/534 msgs left
+msg INBOX/569 {5261}          copied to INBOX/115        1.45 msgs/s  168.689 KiB/s 12.004 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:21 -0400 CDT  294 s  428/534 msgs left
+msg INBOX/570 {4928}          copied to INBOX/116        1.46 msgs/s  168.076 KiB/s 12.008 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:19 -0400 CDT  292 s  427/534 msgs left
+msg INBOX/571 {4904}          copied to INBOX/117        1.47 msgs/s  167.400 KiB/s 12.013 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:17 -0400 CDT  290 s  426/534 msgs left
+msg INBOX/572 {4970}          copied to INBOX/118        1.48 msgs/s  166.834 KiB/s 12.018 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:15 -0400 CDT  288 s  425/534 msgs left
+msg INBOX/573 {4691}          copied to INBOX/119        1.48 msgs/s  166.169 KiB/s 12.022 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:14 -0400 CDT  286 s  424/534 msgs left
+msg INBOX/574 {30384}         copied to INBOX/120        1.49 msgs/s  165.544 KiB/s 12.051 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:13 -0400 CDT  284 s  423/534 msgs left
+msg INBOX/575 {6515}          copied to INBOX/121        1.49 msgs/s  164.778 KiB/s 12.057 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:11 -0400 CDT  282 s  422/534 msgs left
+msg INBOX/577 {4977}          copied to INBOX/122        1.50 msgs/s  164.143 KiB/s 12.062 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:10 -0400 CDT  280 s  421/534 msgs left
+msg INBOX/578 {4971}          copied to INBOX/123        1.51 msgs/s  163.426 KiB/s 12.067 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:08 -0400 CDT  279 s  420/534 msgs left
+msg INBOX/579 {4729}          copied to INBOX/124        1.51 msgs/s  162.799 KiB/s 12.071 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:07 -0400 CDT  277 s  419/534 msgs left
+msg INBOX/580 {11983}         copied to INBOX/125        1.52 msgs/s  162.287 KiB/s 12.083 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:05 -0400 CDT  275 s  418/534 msgs left
+msg INBOX/581 {4700}          copied to INBOX/126        1.53 msgs/s  161.724 KiB/s 12.087 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:03 -0400 CDT  273 s  417/534 msgs left
+msg INBOX/582 {4735}          copied to INBOX/127        1.54 msgs/s  161.106 KiB/s 12.092 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:02 -0400 CDT  271 s  416/534 msgs left
+msg INBOX/583 {4743}          copied to INBOX/128        1.54 msgs/s  160.508 KiB/s 12.096 MiB copied ETA: sábado 26 agosto 2023-08-26 03:58:00 -0400 CDT  269 s  415/534 msgs left
+msg INBOX/584 {4138}          copied to INBOX/129        1.55 msgs/s  159.908 KiB/s 12.100 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:59 -0400 CDT  267 s  414/534 msgs left
+msg INBOX/586 {5696}          copied to INBOX/130        1.56 msgs/s  159.361 KiB/s 12.106 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:57 -0400 CDT  266 s  413/534 msgs left
+msg INBOX/588 {14747}         copied to INBOX/131        1.56 msgs/s  158.843 KiB/s 12.120 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:56 -0400 CDT  264 s  412/534 msgs left
+msg INBOX/589 {200651}        copied to INBOX/132        1.56 msgs/s  159.553 KiB/s 12.311 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:57 -0400 CDT  264 s  411/534 msgs left
+msg INBOX/594 {6970}          copied to INBOX/133        1.56 msgs/s  158.981 KiB/s 12.318 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:56 -0400 CDT  262 s  410/534 msgs left
+msg INBOX/597 {4636}          copied to INBOX/134        1.57 msgs/s  158.461 KiB/s 12.322 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:54 -0400 CDT  261 s  409/534 msgs left
+msg INBOX/601 {5761}          copied to INBOX/135        1.58 msgs/s  157.897 KiB/s 12.328 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:53 -0400 CDT  259 s  408/534 msgs left
+msg INBOX/604 {5757}          copied to INBOX/136        1.58 msgs/s  157.304 KiB/s 12.333 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:52 -0400 CDT  257 s  407/534 msgs left
+msg INBOX/606 {6739}          copied to INBOX/137        1.59 msgs/s  156.778 KiB/s 12.340 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:50 -0400 CDT  256 s  406/534 msgs left
+msg INBOX/610 {6548}          copied to INBOX/138        1.59 msgs/s  156.246 KiB/s 12.346 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:49 -0400 CDT  254 s  405/534 msgs left
+msg INBOX/611 {796731}        copied to INBOX/139        1.56 msgs/s  160.994 KiB/s 13.106 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:56 -0400 CDT  259 s  404/534 msgs left
+msg INBOX/612 {2528}          copied to INBOX/140        1.57 msgs/s  160.511 KiB/s 13.108 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:55 -0400 CDT  257 s  403/534 msgs left
+msg INBOX/613 {50462}         copied to INBOX/141        1.57 msgs/s  160.097 KiB/s 13.156 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:54 -0400 CDT  256 s  402/534 msgs left
+msg INBOX/617 {6858}          copied to INBOX/142        1.57 msgs/s  159.569 KiB/s 13.163 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:53 -0400 CDT  255 s  401/534 msgs left
+msg INBOX/618 {54578}         copied to INBOX/143        1.58 msgs/s  159.259 KiB/s 13.215 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:53 -0400 CDT  254 s  400/534 msgs left
+msg INBOX/619 {83951}         copied to INBOX/144        1.58 msgs/s  159.143 KiB/s 13.295 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:52 -0400 CDT  253 s  399/534 msgs left
+msg INBOX/620 {2830}          copied to INBOX/145        1.59 msgs/s  158.709 KiB/s 13.298 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:51 -0400 CDT  251 s  398/534 msgs left
+msg INBOX/621 {30330}         copied to INBOX/146        1.59 msgs/s  158.147 KiB/s 13.326 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:50 -0400 CDT  250 s  397/534 msgs left
+msg INBOX/622 {55414}         copied to INBOX/147        1.59 msgs/s  157.928 KiB/s 13.379 MiB copied ETA: sábado 26 agosto 2023-08-26 03:57:50 -0400 CDT  249 s  396/534 msgs left
+msg INBOX/623 {8488061}       copied to INBOX/148        1.27 msgs/s  201.673 KiB/s 21.474 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:13 -0400 CDT  310 s  395/534 msgs left
+msg INBOX/626 {159682}        copied to INBOX/149        1.25 msgs/s  197.842 KiB/s 21.626 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:21 -0400 CDT  315 s  394/534 msgs left
+msg INBOX/627 {45193}         copied to INBOX/150        1.25 msgs/s  196.922 KiB/s 21.670 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:21 -0400 CDT  314 s  393/534 msgs left
+msg INBOX/628 {172264}        copied to INBOX/151        1.24 msgs/s  196.006 KiB/s 21.834 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:23 -0400 CDT  315 s  392/534 msgs left
+msg INBOX/630 {6873}          copied to INBOX/152        1.25 msgs/s  195.388 KiB/s 21.840 MiB copied ETA: sábado 26 agosto 2023-08-26 03:59:22 -0400 CDT  313 s  391/534 msgs left
+msg INBOX/631 {10004307}      copied to INBOX/156        0.94 msgs/s  209.740 KiB/s 31.381 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:42 -0400 CDT  415 s  390/534 msgs left
+msg INBOX/632 {48828}         copied to INBOX/157        0.94 msgs/s  209.262 KiB/s 31.428 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:40 -0400 CDT  413 s  389/534 msgs left
+msg INBOX/633 {492315}        copied to INBOX/160        0.94 msgs/s  210.053 KiB/s 31.897 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:43 -0400 CDT  413 s  388/534 msgs left
+msg INBOX/634 {5470}          copied to INBOX/161        0.93 msgs/s  205.714 KiB/s 31.903 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:51 -0400 CDT  418 s  387/534 msgs left
+msg INBOX/635 {509235}        copied to INBOX/162        0.92 msgs/s  205.689 KiB/s 32.388 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:56 -0400 CDT  421 s  386/534 msgs left
+msg INBOX/636 {54690}         copied to INBOX/163        0.92 msgs/s  205.335 KiB/s 32.440 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:54 -0400 CDT  418 s  385/534 msgs left
+msg INBOX/637 {122143}        copied to INBOX/164        0.92 msgs/s  204.916 KiB/s 32.557 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:53 -0400 CDT  416 s  384/534 msgs left
+msg INBOX/638 {25019}         copied to INBOX/165        0.93 msgs/s  204.467 KiB/s 32.581 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:51 -0400 CDT  414 s  383/534 msgs left
+msg INBOX/639 {23748}         copied to INBOX/166        0.93 msgs/s  204.039 KiB/s 32.603 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:49 -0400 CDT  411 s  382/534 msgs left
+msg INBOX/640 {25614}         copied to INBOX/167        0.93 msgs/s  203.634 KiB/s 32.628 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:47 -0400 CDT  409 s  381/534 msgs left
+msg INBOX/641 {24008}         copied to INBOX/168        0.94 msgs/s  203.215 KiB/s 32.651 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:45 -0400 CDT  406 s  380/534 msgs left
+msg INBOX/642 {24627}         copied to INBOX/169        0.94 msgs/s  202.734 KiB/s 32.674 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:43 -0400 CDT  404 s  379/534 msgs left
+msg INBOX/643 {23811}         copied to INBOX/170        0.94 msgs/s  201.883 KiB/s 32.697 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:42 -0400 CDT  402 s  378/534 msgs left
+msg INBOX/644 {23794}         copied to INBOX/171        0.94 msgs/s  201.476 KiB/s 32.720 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:40 -0400 CDT  399 s  377/534 msgs left
+msg INBOX/645 {561098}        copied to INBOX/172        0.92 msgs/s  198.862 KiB/s 33.255 MiB copied ETA: sábado 26 agosto 2023-08-26 04:01:53 -0400 CDT  408 s  376/534 msgs left
+msg INBOX/646 {825969}        copied to INBOX/175        0.84 msgs/s  184.930 KiB/s 34.042 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:47 -0400 CDT  445 s  375/534 msgs left
+msg INBOX/647 {60777}         copied to INBOX/176        0.85 msgs/s  184.633 KiB/s 34.100 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:45 -0400 CDT  442 s  374/534 msgs left
+msg INBOX/648 {25613}         copied to INBOX/177        0.85 msgs/s  184.291 KiB/s 34.125 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:43 -0400 CDT  439 s  373/534 msgs left
+msg INBOX/649 {203191}        copied to INBOX/178        0.85 msgs/s  183.918 KiB/s 34.319 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:44 -0400 CDT  439 s  372/534 msgs left
+msg INBOX/650 {42279}         copied to INBOX/179        0.85 msgs/s  183.561 KiB/s 34.359 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:42 -0400 CDT  436 s  371/534 msgs left
+msg INBOX/651 {101553}        copied to INBOX/181        0.85 msgs/s  182.628 KiB/s 34.456 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:43 -0400 CDT  436 s  370/534 msgs left
+msg INBOX/652 {49735}         copied to INBOX/183        0.85 msgs/s  182.309 KiB/s 34.503 MiB copied ETA: sábado 26 agosto 2023-08-26 04:02:41 -0400 CDT  433 s  369/534 msgs left
+
+Got a signal INT (my PID is 32918 my PPID is 32834)
+Hit 2 ctr-c within 2 seconds to exit the program
+Hit only 1 ctr-c to reconnect to both imap servers
+For now only one signal INT within 2 seconds.
+Info: reconnecting to host1 imap server correo.umcc.cu
+Info: reconnected to host1 imap server correo.umcc.cu

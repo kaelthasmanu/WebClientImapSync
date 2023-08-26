@@ -25,7 +25,7 @@ function ButtonComponent({user, pass}) {
     setButtonLoading(true);
     try{
       postData("http://localhost:3000/api/execute", { user:user  , pass:pass }).then((data) => {
-        if(data["message"] === 'Success'){
+        if(data["message"] === 'Success' || data["message"] === 'Error'){
           setButtonLoading(false);
         } 
       });
@@ -34,8 +34,8 @@ function ButtonComponent({user, pass}) {
       console.log(err)
     }
   };
-  
-  if(user === null || user == "manuel.gorrin@umcc.cu"){
+  //|| user == "manuel.gorrin@umcc.cu"
+  if(user === null){
     return (<Button size='md' isDisabled onPress={handleClickLoading} >Empezar</Button>)
   }
   else if (buttonLoading){

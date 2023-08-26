@@ -1,49 +1,43 @@
 import { NextResponse } from 'next/server';
 import { spawn } from 'node:child_process'
 
-export async function GET(request) {
-    const ls = spawn("ls", ["-la"]);
-    let value = 0
-    
-    ls.stdout.on("data", data => {
-        console.log(`stdout: ${data}`);
-        value = 1
-    });
-
-    ls.stderr.on("data", data => {
-        console.log(`stderr: ${data}`);
-        value = 0
-    });
-
-    ls.on('error', (error) => {
-        console.log(`error: ${error.message}`);
-        value = 0
-    });
-
-    ls.on("close", code => {
-        console.log(`child process exited with code ${code}`);
-        value = 0
-    });
-
-    if (ls.exitCode === null) {
-        console.log('Process is still active.');
-      } else {
-        console.log(`Process has exited with code ${ls.exitCode}.`);
-      }
-      
-    if(value === 0){
-        return NextResponse.json({message: "Success"})
-    }
-    else{
-        return NextResponse.json({message: "Error"})
-    }
-    
-}
-
-export async function POST(request) {
+export async function POST(request)     {
     const bodyText = await request.text();
     const bodyJson = JSON.parse(bodyText);
-    console.log(bodyJson["user"], bodyJson["pass"]);
-    await new Promise(r => setTimeout(r, 6000));
-    return NextResponse.json({message: "Success"})    
+    const imapsync = spawn('imapsync', [
+        '--host1', 'correo.umcc.cu',
+        '--user1', bodyJson["user"],
+        '--password1', bodyJson["pass"],
+        '--host2', 'mail.umcc.cu',
+        '--user2', bodyJson["user"],
+        '--password2', bodyJson["pass"]
+      ]);
+
+    imapsync.stdout.on("data", data => {
+        console.log(`stdout: ${data}`);
+    });
+
+    let hasError = false;
+
+    imapsync.stderr.on("data", data => {
+        console.log(`stderr: ${data}`);
+        hasError = true;
+    });
+
+    imapsync.on('error', (error) => {
+        console.log(`error: ${error.message}`);
+        hasError = true;
+    });
+
+    imapsync.on("close", code => {
+        console.log(`child process exited with code ${code}`);
+        if (hasError) {
+            return NextResponse.json({ message: "Error" });
+        } else {
+            return NextResponse.json({ message: "Success" });
+    }
+});
+
+
+    
 }

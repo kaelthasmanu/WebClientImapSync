@@ -1,0 +1,313 @@
+Here is imapsync 2.229 on host Whois, a linux system with 0.4/7.6 free GiB of RAM, 133.06% used by processes.
+with Perl 5.34.0 and Mail::IMAPClient 3.43
+Transfer started at sábado 26 agosto 2023-08-26 04:08:41 -0400 CDT
+PID is 34383 my PPID is 34277
+Log file is LOG_imapsync/2023_08_26_04_08_41_890_manuel.gorrin@umcc.cu_manuel.gorrin@umcc.cu.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 2.05 2.01 1.87 3/1502 on 4 cores
+Current directory is /home/whois/Desktop/WebClientImapSync
+Real user id is whois (uid 1000)
+Effective user id is whois (euid 1000)
+$RCSfile: imapsync,v $ $Revision: 2.229 $ $Date: 2022/09/14 18:08:24 $ 
+Command line used, run by /usr/bin/perl:
+/usr/bin/imapsync --host1 correo.umcc.cu --user1 manuel.gorrin@umcc.cu --password1 MASKED --host2 mail.umcc.cu --user2 manuel.gorrin@umcc.cu --password2 MASKED
+Temp directory is /tmp ( to change it use --tmpdir dirpath )
+kill -QUIT 34383 # special behavior: call to sub catch_exit
+kill -TERM 34383 # special behavior: call to sub catch_exit
+kill -INT 34383 # special behavior: call to sub catch_reconnect
+kill -HUP 34383 # special behavior: call to sub catch_print
+kill -USR1 34383 # special behavior: call to sub toggle_sleep
+Removing old /tmp/imapsync.pid since its PID 33892 is not running anymore (oo-killed?)
+Removed old /tmp/imapsync.pid
+PID file is /tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 34383 in /tmp/imapsync.pid
+Writing also my logfile name in /tmp/imapsync.pid : LOG_imapsync/2023_08_26_04_08_41_890_manuel.gorrin@umcc.cu_manuel.gorrin@umcc.cu.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  4.54
+Compress::Zlib       2.102
+Crypt::OpenSSL::RSA  0.32
+Data::Uniqid         0.12
+Digest::HMAC_MD5     1.04
+Digest::HMAC_SHA1    1.04
+Digest::MD5          2.58
+Encode               3.08
+Encode::IMAPUTF7     1.05
+File::Copy::Recursive 0.45
+File::Spec           3.80
+Getopt::Long         2.52
+HTML::Entities       3.76
+IO::Socket           1.46
+IO::Socket::INET     1.46
+IO::Socket::INET6    2.73
+IO::Socket::IP       0.41
+IO::Socket::SSL      2.074
+IO::Tee              0.65
+JSON                 4.04
+JSON::WebToken       0.10
+LWP                  6.61
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.92
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9767
+URI::Escape          5.10
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+Host1: probing ssl on port 993 ( use --nosslcheck to avoid this ssl probe ) 
+Host1: sslcheck detected open ssl port 993 so turning ssl on (use --nossl1 --notls1 to turn off SSL and TLS wizardry)
+Host2: probing ssl on port 993 ( use --nosslcheck to avoid this ssl probe ) 
+Host2: sslcheck detected open ssl port 993 so turning ssl on (use --nossl2 --notls2 to turn off SSL and TLS wizardry)
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [correo.umcc.cu] port [993] user [manuel.gorrin@umcc.cu]
+Host2: IMAP server [mail.umcc.cu] port [993] user [manuel.gorrin@umcc.cu]
+Host1: connecting and login on host1 [correo.umcc.cu] port [993] with user [manuel.gorrin@umcc.cu]
+Host1 IP address: 10.34.8.9 Local IP address: 10.8.0.8
+Host1 banner: * OK IMAP4rev1 proxy server ready
+Host1 capability before authentication: ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE IMAP4rev1 LIST-EXTENDED LIST-STATUS LITERAL+ MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST AUTH=PLAIN I18NLEVEL RIGHTS THREAD AUTH
+Host1: success login on [correo.umcc.cu] with user [manuel.gorrin@umcc.cu] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [mail.umcc.cu] port [993] with user [manuel.gorrin@umcc.cu]
+Host2 IP address: 10.34.8.163 Local IP address: 10.8.0.8
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready OK+.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host2: mail.umcc.cu says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mail.umcc.cu] with user [manuel.gorrin@umcc.cu] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST I18NLEVEL RIGHTS THREAD
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE ACL RIGHTS=texk THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS RIGHTS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.229" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "14-Sep-2022 18:08:24 +0000" "side" "host1")
+Sent 181 bytes
+Read: 	* ID ("NAME" "Zimbra" "VERSION" "10.0.0_GA_0001" "RELEASE" "20230418135109" "USER" "manuel.gorrin@umcc.cu" "SERVER" "690b31c7-ac9d-4d90-bd95-7b72e088ae2e")
+  	4 OK ID completed
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.229" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "14-Sep-2022 18:08:24 +0000" "side" "host2")
+Sent 181 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: No QUOTA capability found, skipping it.
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Host1: found 7 folders.
+Host2: found 8 folders.
+Host1: guessing separator from folder listing: [/]
+Host1: separator given by NAMESPACE: [/]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [/]
+Host1: guessing prefix from folder listing: []
+Host1: prefix given by NAMESPACE: []
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [/][]
+Host2: separator and prefix: [/][]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "/" "Comments"
+* LIST (\HasNoChildren \Drafts) "/" "Drafts"
+* LIST (\HasNoChildren) "/" "INBOX"
+* LIST (\NoInferiors \Junk) "/" "Junk"
+* LIST (\HasNoChildren) "/" "Notes"
+* LIST (\HasNoChildren \Sent) "/" "Sent"
+* LIST (\HasNoChildren \Trash) "/" "Trash"
+16 OK LIST completed
+
+[Comments]
+[Drafts]
+[INBOX]
+[Junk]
+[Notes]
+[Sent]
+[Trash]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "/" Comments
+* LIST (\HasNoChildren \UnMarked \Junk) "/" Spam
+* LIST (\HasNoChildren \UnMarked \Archive) "/" Archive
+* LIST (\HasNoChildren \Trash) "/" Trash
+* LIST (\HasNoChildren \UnMarked \Junk) "/" Junk
+* LIST (\HasNoChildren \UnMarked \Drafts) "/" Drafts
+* LIST (\HasNoChildren \Sent) "/" Sent
+* LIST (\HasNoChildren) "/" INBOX
+9 OK List completed (0.001 + 0.000 secs).
+
+[Archive]
+[Comments]
+[Drafts]
+[INBOX]
+[Junk]
+[Sent]
+[Spam]
+[Trash]
+
+Folders in host2 not in host1:
+[Spam]
+[Archive]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 345 messages mentioned by SELECT
+Host1: folder [INBOX] has 345 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (345) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 0 messages mentioned by SELECT
+Host2: folder [INBOX] has 0 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (0) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder     1/7 [Comments]                          Size:         0 Messages:     0 Biggest:         0
+Host2 folder     1/7 [Comments]                          Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     2/7 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/7 [INBOX]                             Size:  64917621 Messages:   345 Biggest:  10004307
+Host2 folder     3/7 [INBOX]                             Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                    -64917621            -345          -10004307
+
+Host1 folder     4/7 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/7 [Notes]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     5/7 [Notes]                              does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     6/7 [Sent]                              Size:  18247349 Messages:   189 Biggest:   4898722
+Host2 folder     6/7 [Sent]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                    -18247349            -189           -4898722
+
+Host1 folder     7/7 [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [Trash]                             Size:  92542757 Messages:   467 Biggest:  10004307
+Host2-Host1                                                     92542757             467           10004307
+
+Host1 Nb folders:                     7 folders
+Host2 Nb folders:                     7 folders
+
+Host1 Nb messages:                  534 messages
+Host2 Nb messages:                  467 messages
+
+Host1 Total size:              83164970 bytes (79.312 MiB)
+Host2 Total size:              92542757 bytes (88.256 MiB)
+
+Host1 Biggest message:         10004307 bytes (9.541 MiB)
+Host2 Biggest message:         10004307 bytes (9.541 MiB)
+
+Time spent on sizing:         6.5 seconds
+++++ Looping on each one of 7 folders to sync
+ETA: sábado 26 agosto 2023-08-26 04:08:48 -0400 CDT  0 s  534/534 msgs left
+Folder     1/7 [Comments]                          -> [Comments]                         
+Host1: folder [Comments] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Comments] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Comments] permanentflags: 
+Host1: folder [Comments] considering 0 messages
+Host2: folder [Comments] considering 0 messages
+Host1: folder [Comments] selected 0 messages, duplicates 0
+Host2: folder [Comments] selected 0 messages, duplicates 0
+ETA: sábado 26 agosto 2023-08-26 04:12:14 -0400 CDT  206 s  534/534 msgs left
+Folder     2/7 [Drafts]                            -> [Drafts]                           
+Host1: folder [Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] permanentflags: 
+Host1: folder [Drafts] considering 0 messages
+Host2: folder [Drafts] considering 0 messages
+Host1: folder [Drafts] selected 0 messages, duplicates 0
+Host2: folder [Drafts] selected 0 messages, duplicates 0
+ETA: sábado 26 agosto 2023-08-26 04:15:13 -0400 CDT  385 s  534/534 msgs left
+Folder     3/7 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 345 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 345 messages
+Host2: folder [INBOX] considering 0 messages
+Host1: folder [INBOX] selected 345 messages, duplicates 0
+Host2: folder [INBOX] selected 0 messages, duplicates 0
+msg INBOX/303 {89216}         copied to INBOX/465        0.38 msgs/s  33.116 KiB/s 87.125 KiB copied ETA: sábado 26 agosto 2023-08-26 04:32:13 -0400 CDT  1403 s  533/534 msgs left
+msg INBOX/351 {6541}          copied to INBOX/466        0.68 msgs/s  31.880 KiB/s 93.513 KiB copied ETA: sábado 26 agosto 2023-08-26 04:21:51 -0400 CDT  780 s  532/534 msgs left
+msg INBOX/354 {6517}          copied to INBOX/467        0.93 msgs/s  31.048 KiB/s 99.877 KiB copied ETA: sábado 26 agosto 2023-08-26 04:18:21 -0400 CDT  570 s  531/534 msgs left
+msg INBOX/357 {17274}         copied to INBOX/468        1.11 msgs/s  32.467 KiB/s 116.746 KiB copied ETA: sábado 26 agosto 2023-08-26 04:16:48 -0400 CDT  477 s  530/534 msgs left
+msg INBOX/359 {4868}          copied to INBOX/469        1.29 msgs/s  31.291 KiB/s 121.500 KiB copied ETA: sábado 26 agosto 2023-08-26 04:15:43 -0400 CDT  411 s  529/534 msgs left
+msg INBOX/363 {7812}          copied to INBOX/470        1.43 msgs/s  30.740 KiB/s 129.129 KiB copied ETA: sábado 26 agosto 2023-08-26 04:15:02 -0400 CDT  370 s  528/534 msgs left
+msg INBOX/365 {7826}          copied to INBOX/471        1.55 msgs/s  30.313 KiB/s 136.771 KiB copied ETA: sábado 26 agosto 2023-08-26 04:14:32 -0400 CDT  340 s  527/534 msgs left
+msg INBOX/367 {25981}         copied to INBOX/472        1.63 msgs/s  33.011 KiB/s 162.144 KiB copied ETA: sábado 26 agosto 2023-08-26 04:14:16 -0400 CDT  323 s  526/534 msgs left
+msg INBOX/368 {4867}          copied to INBOX/473        1.72 msgs/s  31.936 KiB/s 166.896 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:58 -0400 CDT  305 s  525/534 msgs left
+msg INBOX/369 {4864}          copied to INBOX/474        1.81 msgs/s  30.993 KiB/s 171.646 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:44 -0400 CDT  290 s  524/534 msgs left
+msg INBOX/371 {34372}         copied to INBOX/475        1.83 msgs/s  34.195 KiB/s 205.213 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:39 -0400 CDT  285 s  523/534 msgs left
+msg INBOX/372 {20148}         copied to INBOX/476        1.86 msgs/s  34.805 KiB/s 224.889 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:35 -0400 CDT  281 s  522/534 msgs left
+msg INBOX/373 {19992}         copied to INBOX/477        1.90 msgs/s  35.631 KiB/s 244.412 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:30 -0400 CDT  275 s  521/534 msgs left
+msg INBOX/374 {30516}         copied to INBOX/478        1.92 msgs/s  37.642 KiB/s 274.213 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:26 -0400 CDT  271 s  520/534 msgs left
+msg INBOX/375 {61457}         copied to INBOX/479        1.93 msgs/s  43.016 KiB/s 334.229 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:25 -0400 CDT  269 s  519/534 msgs left
+msg INBOX/377 {3244}          copied to INBOX/480        1.99 msgs/s  42.015 KiB/s 337.397 KiB copied ETA: sábado 26 agosto 2023-08-26 04:13:16 -0400 CDT  260 s  518/534 msgs left
+msg INBOX/378 {1249754}       copied to INBOX/481        1.47 msgs/s  134.952 KiB/s 1.521 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:50 -0400 CDT  351 s  517/534 msgs left
+msg INBOX/379 {36346}         copied to INBOX/482        1.50 msgs/s  132.824 KiB/s 1.556 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:44 -0400 CDT  344 s  516/534 msgs left
+msg INBOX/380 {7020}          copied to INBOX/483        1.54 msgs/s  129.718 KiB/s 1.563 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:35 -0400 CDT  334 s  515/534 msgs left
+msg INBOX/381 {3570}          copied to INBOX/484        1.59 msgs/s  127.249 KiB/s 1.566 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:24 -0400 CDT  324 s  514/534 msgs left
+msg INBOX/382 {86662}         copied to INBOX/485        1.59 msgs/s  127.771 KiB/s 1.649 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:24 -0400 CDT  323 s  513/534 msgs left
+msg INBOX/383 {4866}          copied to INBOX/486        1.62 msgs/s  124.970 KiB/s 1.653 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:17 -0400 CDT  315 s  512/534 msgs left
+msg INBOX/384 {7014}          copied to INBOX/487        1.66 msgs/s  122.554 KiB/s 1.660 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:10 -0400 CDT  308 s  511/534 msgs left
+msg INBOX/386 {3132}          copied to INBOX/488        1.70 msgs/s  120.656 KiB/s 1.663 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:02 -0400 CDT  300 s  510/534 msgs left
+msg INBOX/387 {359319}        copied to INBOX/489        1.63 msgs/s  134.223 KiB/s 2.006 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:15 -0400 CDT  312 s  509/534 msgs left
+msg INBOX/389 {7712}          copied to INBOX/490        1.66 msgs/s  131.730 KiB/s 2.013 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:09 -0400 CDT  306 s  508/534 msgs left
+msg INBOX/393 {4874}          copied to INBOX/491        1.69 msgs/s  129.503 KiB/s 2.018 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:03 -0400 CDT  300 s  507/534 msgs left
+msg INBOX/397 {3002}          copied to INBOX/492        1.72 msgs/s  127.471 KiB/s 2.021 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:57 -0400 CDT  293 s  506/534 msgs left
+msg INBOX/403 {22879}         copied to INBOX/493        1.74 msgs/s  125.838 KiB/s 2.042 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:54 -0400 CDT  289 s  505/534 msgs left
+msg INBOX/404 {23023}         copied to INBOX/494        1.76 msgs/s  124.167 KiB/s 2.064 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:51 -0400 CDT  286 s  504/534 msgs left
+msg INBOX/405 {19512}         copied to INBOX/495        1.78 msgs/s  122.256 KiB/s 2.083 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:48 -0400 CDT  283 s  503/534 msgs left
+msg INBOX/406 {10301}         copied to INBOX/496        1.80 msgs/s  120.652 KiB/s 2.093 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:44 -0400 CDT  279 s  502/534 msgs left
+msg INBOX/407 {3329}          copied to INBOX/497        1.83 msgs/s  119.180 KiB/s 2.096 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:39 -0400 CDT  273 s  501/534 msgs left
+msg INBOX/408 {10741}         copied to INBOX/498        1.86 msgs/s  117.742 KiB/s 2.106 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:36 -0400 CDT  269 s  500/534 msgs left
+msg INBOX/413 {65048}         copied to INBOX/499        1.86 msgs/s  117.715 KiB/s 2.168 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:36 -0400 CDT  269 s  499/534 msgs left
+msg INBOX/419 {4869}          copied to INBOX/500        1.88 msgs/s  115.989 KiB/s 2.173 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:32 -0400 CDT  265 s  498/534 msgs left
+msg INBOX/420 {6529}          copied to INBOX/501        1.89 msgs/s  114.130 KiB/s 2.179 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:30 -0400 CDT  263 s  497/534 msgs left
+msg INBOX/423 {4871}          copied to INBOX/502        1.92 msgs/s  112.693 KiB/s 2.184 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:27 -0400 CDT  259 s  496/534 msgs left
+msg INBOX/424 {89630}         copied to INBOX/503        1.91 msgs/s  113.639 KiB/s 2.269 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:28 -0400 CDT  260 s  495/534 msgs left
+msg INBOX/425 {3004}          copied to INBOX/504        1.90 msgs/s  110.729 KiB/s 2.272 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:28 -0400 CDT  260 s  494/534 msgs left
+msg INBOX/426 {84428}         copied to INBOX/505        1.89 msgs/s  111.331 KiB/s 2.353 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:30 -0400 CDT  260 s  493/534 msgs left
+msg INBOX/427 {51088}         copied to INBOX/506        1.89 msgs/s  110.741 KiB/s 2.401 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:30 -0400 CDT  260 s  492/534 msgs left
+msg INBOX/430 {30508}         copied to INBOX/507        1.90 msgs/s  110.000 KiB/s 2.430 MiB copied ETA: sábado 26 agosto 2023-08-26 04:13:29 -0400 CDT  258 s  491/534 msgs left
+msg INBOX/431 {2506336}       copied to INBOX/508        1.41 msgs/s  158.331 KiB/s 4.821 MiB copied ETA: sábado 26 agosto 2023-08-26 04:15:06 -0400 CDT  347 s  490/534 msgs left
+msg INBOX/432 {50074}         copied to INBOX/509        1.42 msgs/s  157.343 KiB/s 4.868 MiB copied ETA: sábado 26 agosto 2023-08-26 04:15:04 -0400 CDT  344 s  489/534 msgs left
+msg INBOX/433 {15558}         copied to INBOX/510        1.44 msgs/s  156.010 KiB/s 4.883 MiB copied ETA: sábado 26 agosto 2023-08-26 04:15:00 -0400 CDT  340 s  488/534 msgs left
+msg INBOX/434 {88566}         copied to INBOX/511        1.44 msgs/s  155.932 KiB/s 4.968 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:59 -0400 CDT  338 s  487/534 msgs left
+msg INBOX/450 {7690}          copied to INBOX/512        1.45 msgs/s  154.132 KiB/s 4.975 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:56 -0400 CDT  335 s  486/534 msgs left
+msg INBOX/451 {2741}          copied to INBOX/513        1.47 msgs/s  152.785 KiB/s 4.978 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:51 -0400 CDT  330 s  485/534 msgs left
+msg INBOX/452 {70143}         copied to INBOX/514        1.47 msgs/s  152.013 KiB/s 5.045 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:51 -0400 CDT  329 s  484/534 msgs left
+msg INBOX/455 {4893}          copied to INBOX/515        1.48 msgs/s  150.495 KiB/s 5.049 MiB copied ETA: sábado 26 agosto 2023-08-26 04:14:48 -0400 CDT  325 s  483/534 msgs left
+
+Got a signal INT (my PID is 34383 my PPID is 34277)
+Hit 2 ctr-c within 2 seconds to exit the program
+Hit only 1 ctr-c to reconnect to both imap servers
+For now only one signal INT within 2 seconds.
+Info: reconnecting to host1 imap server correo.umcc.cu
+Info: reconnected to host1 imap server correo.umcc.cu
