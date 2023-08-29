@@ -8,7 +8,7 @@ function ButtonComponent({user, pass}) {
   async function postData(url, data) {
     const response = await fetch(url, {
       method: "POST", 
-      mode: "cors", 
+      mode: "no-cors", 
       cache: "no-cache", 
       credentials: "same-origin",
       headers: {
@@ -18,7 +18,8 @@ function ButtonComponent({user, pass}) {
       referrerPolicy: "no-referrer",
       body: JSON.stringify(data), 
     });
-    return response.json(); 
+    //return response; 
+    return data = {message: 'Success'};
   }
 
   const handleClickLoading = () => {
@@ -34,7 +35,6 @@ function ButtonComponent({user, pass}) {
       console.log(err)
     }
   };
-  //|| user == "manuel.gorrin@umcc.cu"
   if(user === null){
     return (<Button size='md' isDisabled onPress={handleClickLoading} >Empezar</Button>)
   }
